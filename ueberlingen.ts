@@ -275,10 +275,20 @@ export type ueberlingen = {
     type: string,
     required: true,
   },
-  medication: {
-    type: string,
-    required: true,
+  medications: [
+  {
+    name: string,
+    dosage_morning: number,
+    dosage_afternoon: number,
+    dosage_evening: number,
+    dosage_night: number,
+    agent:
+      “medicationBloodThinning” |
+      “medicationDiabetes” |
+      “medicationImmuneSuppressive” |
+      “medicationOther”,
   },
+],
   miscellaneous: {
     type: string,
     required: true,
