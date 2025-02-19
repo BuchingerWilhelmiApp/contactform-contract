@@ -283,10 +283,10 @@ export type marbella = {
     dosage_evening: number,
     dosage_night: number,
     agent:
-      “medicationBloodThinning” |
-      “medicationDiabetes” |
-      “medicationImmuneSuppressive” |
-      “medicationOther”,
+      "medicationBloodThinning" |
+      "medicationDiabetes" |
+      "medicationImmuneSuppressive" |
+      "medicationOther",
   },
 ],
   miscellaneous: {
