@@ -18,10 +18,12 @@ export type ueberlingen = {
   lastName: {
     type: string,
     required: true,
+    mandatory: true,
   },
   firstName: {
     type: string,
     required: true,
+    mandatory: true,
   },
   email: {
     type: string,
@@ -283,10 +285,10 @@ export type ueberlingen = {
     dosage_evening: number,
     dosage_night: number,
     agent:
-      “medicationBloodThinning” |
-      “medicationDiabetes” |
-      “medicationImmuneSuppressive” |
-      “medicationOther”,
+      "medicationBloodThinning"|
+      "medicationDiabetes"|
+      "medicationImmuneSuppressive"|
+      "medicationOther",
   },
 ],
   miscellaneous: {
