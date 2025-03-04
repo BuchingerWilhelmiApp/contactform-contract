@@ -415,6 +415,12 @@ export type marbellaContract = {
     },
   ],
 
+  medicationGeneral: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  
   otherMedication: {
     type: string,
     required: false,
