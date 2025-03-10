@@ -604,4 +604,4 @@ export type marbellaContract = {
     required: false,
     mandatory: false,
   },
-},
+}
