@@ -61,11 +61,11 @@ export type marbellaContract = {
 
   // TODO: nicht benötigt...denke ich mal
   // oder sollte es vorausgefüllt sein?
-  // email: {
-  //   type: string,
-  //   required: true,
-  // mandatory: true,
-  // },
+  email: {
+    type: string,
+    required: true,
+    mandatory: true,
+  },
 
   contactPhone: {
     type: string,
@@ -147,7 +147,7 @@ export type marbellaContract = {
     required: true,
     mandatory: true,
   },
-  
+
   // TODO: added
   parkingSpot: {
     type: boolean,
@@ -167,52 +167,52 @@ export type marbellaContract = {
     mandatory: false,
   },
 
-  goalsDigestiveSystem: {
+  reasonDigestive: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  goalsChronicDiseases: {
+  reasonChronic: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  goalsLocomotor: {
+  reasonLocomotive: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  goalsRecoveringAcuteIllness: {
+  reasonAcute: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  goalsRecoveringAcuteIllnessDetail: {
+  reasonAcuteDetail: {
     type: string,
     required: false,
     mandatory: false,
   },
-  goalsPrevention: {
+  reasonPrevention: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  goalsSupportingRegeneration: {
+  reasonRegeneration: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  goalsWeightReduction: {
+  reasonWeight: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  goalsStoppingSmoking: {
+  reasonSmoke: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  goalsEmbarkingLifeStyleChange: {
+  reasonWeightAndLifestyle: {
     type: boolean,
     required: false,
     mandatory: false,
@@ -262,23 +262,23 @@ export type marbellaContract = {
     required: false,
     mandatory: false,
   },
-  goalsOther: {
+  reasonOther: {
     type: string,
     required: false,
     mandatory: false,
   },
 
-  diseasesDiabetesMellitusType1: {
+  exclusionDiabetesType1: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  diseasesDiabetesMellitusType2: {
+  exclusionDiabetesType2: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  diseasesCancer: {
+  exclusionCancer: {
     type: boolean,
     required: false,
     mandatory: false,
@@ -294,22 +294,22 @@ export type marbellaContract = {
     required: false,
     mandatory: false,
   },
-  diseasesSevereAddiction: {
+  exclusionDrugs: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  diseasesEatingDisorder: {
+  exclusionEatingDis: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  diseasesSevereLiverDisfunction: {
+  exclusionSevereLiverAndKidneyDisfunction: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  diseasesNoneOfTheAbove: {
+  noExclusion: {
     type: boolean,
     required: false,
     mandatory: false,
@@ -356,12 +356,12 @@ export type marbellaContract = {
     mandatory: false,
   },
 
-  allergiesFood: {
+  disabilityFood: {
     type: boolean,
     required: true,
     mandatory: false,
   },
-  allergiesFoodDetail: {
+  disabilityFoodDetail: {
     type: string,
     required: true,
     mandatory: false,
@@ -378,28 +378,32 @@ export type marbellaContract = {
     mandatory: false,
   },
 
-  supportMobility: {
+  disabilityLocomotion: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  supportMobilityDetail: {
+  disabilityLocomotionDetail: {
     type: string,
     required: true,
     mandatory: false,
   },
 
-  supportSpecialCare: {
+  disabilityHelp: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  supportSpecialCareDetail: {
+  disabilityHelpDetail: {
     type: string,
     required: true,
     mandatory: false,
   },
-
+  medicationGeneral: {
+    type: boolean,
+    required: true,
+    mandatory: false,
+  },
   medications: [
     {
       name: string,
@@ -412,15 +416,9 @@ export type marbellaContract = {
         | "medicationDiabetes"
         | "medicationImmuneSuppressive"
         | "medicationOther",
-    },
+    }
   ],
 
-  medicationGeneral: {
-    type: boolean,
-    required: false,
-    mandatory: false,
-  },
-  
   otherMedication: {
     type: string,
     required: false,
@@ -434,12 +432,12 @@ export type marbellaContract = {
 
   // contribution
   // TODO: should also be maybe
-  contribution: {
-    type: boolean,
+  talk: {
+    type: boolean | "maybe",
     required: false,
     mandatory: false,
   },
-  contributionDetail: {
+  talkDetail: {
     type: string,
     required: true,
     mandatory: false,
@@ -545,12 +543,12 @@ export type marbellaContract = {
   //   required: true,
   // },
 
-  individualTreatment: {
+  legalContinuity: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  sendingNewsletter: {
+  legalNewsletter: {
     type: boolean,
     required: false,
     mandatory: false,
@@ -559,7 +557,9 @@ export type marbellaContract = {
   // TODO:
   // hier bin ich
 
-  // TODO: from here hardcoded
+  // patID:{
+  //   required: false
+  // },
   trenner: {
     required: false,
   },
@@ -567,34 +567,41 @@ export type marbellaContract = {
     type: string,
     required: true,
     mandatory: true,
+    hardCode: true,
   },
   addressResidency: {
     type: string,
     required: true,
     mandatory: true,
+    hardCode: true,
   },
   addressStreet: {
     type: string,
     required: true,
     mandatory: true,
+    hardCode: true,
   },
   addressCountry: {
     type: string,
     required: true,
     mandatory: true,
+    hardCode: true,
   },
   // TODO: for your health:
 
   fyhMicrobiomeTest: {
     type: boolean,
     required: false,
+    mandatory: false,
   },
   fyhFullBloodPanelTest: {
     type: boolean,
     required: false,
+    mandatory: false,
   },
   fyhCortisolTest: {
     type: boolean,
     required: false,
+    mandatory: false,
   },
-}
+},
