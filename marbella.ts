@@ -11,11 +11,6 @@ export type marbellaContract = {
     mandatory: false,
     // mandatory: true,
   },
-  firstTime: {
-    type: string,
-    required: true,
-    mandatory: true,
-  },
 
   gender: {
     type: string,
@@ -416,7 +411,7 @@ export type marbellaContract = {
         | "medicationDiabetes"
         | "medicationImmuneSuppressive"
         | "medicationOther",
-    }
+    },
   ],
 
   otherMedication: {
@@ -443,68 +438,16 @@ export type marbellaContract = {
     mandatory: false,
   },
 
-  // referrer: {
-  //   // type: string,
-  //   type:
-  //     | "doctor"
-  //     | "other-patient"
-  //     | "family"
-  //     | "firend"
-  //     | "media"
-  //     | "other"
-  //     | "no_specification",
-  //   required: true,
-  //   mandatory: true,
-  // },
-  referrerOtherDoctor: {
-    type: boolean,
-    required: false,
-    mandatory: false,
+  referrer: {
+    type: string,
+    required: true,
+    mandatory: true,
   },
   referrerDetail: {
     type: string,
     required: true,
     mandatory: false,
   },
-  referrerOtherPatient: {
-    type: boolean,
-    required: false,
-    mandatory: false,
-  },
-  referrerFamily: {
-    type: boolean,
-
-    required: false,
-    mandatory: false,
-  },
-  referrerFriend: {
-    type: boolean,
-
-    required: false,
-    mandatory: false,
-  },
-  referrerMedia: {
-    type: boolean,
-
-    required: false,
-    mandatory: false,
-  },
-  referrerOther: {
-    type: boolean,
-
-    required: false,
-    mandatory: false,
-  },
-  referrerNo_specification: {
-    type: boolean,
-
-    required: false,
-    mandatory: false,
-  },
-  // roomPreferences: {
-  //   type: "flowers" | "newspaper" | "yoga_mat",
-  //   required: false,
-  // },
   roomPreferenceFlower: {
     type: boolean,
     required: false,
@@ -554,9 +497,13 @@ export type marbellaContract = {
     mandatory: false,
   },
 
+
   // TODO:
   // hier bin ich
 
+  // patID:{
+  //   required: false
+  // },
   // patID:{
   //   required: false
   // },
@@ -567,28 +514,23 @@ export type marbellaContract = {
     type: string,
     required: true,
     mandatory: true,
-    hardCode: true,
   },
   addressResidency: {
     type: string,
     required: true,
     mandatory: true,
-    hardCode: true,
   },
   addressStreet: {
     type: string,
     required: true,
     mandatory: true,
-    hardCode: true,
   },
   addressCountry: {
     type: string,
     required: true,
     mandatory: true,
-    hardCode: true,
   },
-  // TODO: for your health:
-
+  
   fyhMicrobiomeTest: {
     type: boolean,
     required: false,
