@@ -441,7 +441,7 @@ export type marbellaContract = {
   referrer: {
     type: string,
     required: true,
-    mandatory: true,
+    mandatory: false,
   },
   referrerDetail: {
     type: string,
