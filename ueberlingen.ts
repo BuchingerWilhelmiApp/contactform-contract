@@ -1,19 +1,25 @@
 export type ueberlingen = {
   patID: {
     type: string,
-    required: true,
+    required: false,
+    mandatory: false,
   },
-  firstTime: {
+  //  TODO:
+  step: {
     type: string,
     required: true,
+    mandatory: false,
   },
+
   gender: {
     type: string,
     required: true,
+    mandatory: true,
   },
   title: {
     type: string,
     required: false,
+    mandatory: false,
   },
   lastName: {
     type: string,
@@ -25,310 +31,518 @@ export type ueberlingen = {
     required: true,
     mandatory: true,
   },
-  email: {
-    type: string,
-    required: true,
-  },
   birthDate: {
     type: string,
     required: true,
+    mandatory: true,
   },
   birthPlace: {
     type: string,
-    required: true,
-  },
-  nationality: {
-    type: string,
-    required: true,
+    required: false,
+    mandatory: false,
   },
   job: {
     type: string,
+    required: false,
+    mandatory: false,
+  },
+
+  nationality: {
+    type: string,
+    required: true,
+    mandatory: true,
+  },
+
+  // TODO: nicht benötigt...denke ich mal
+  // oder sollte es vorausgefüllt sein?
+  email: {
+    type: string,
+    required: true,
+    mandatory: true,
+  },
+
+  contactPhone: {
+    type: string,
+    required: true,
+    mandatory: true,
+  },
+  contactFax: {
+    type: string,
+    required: false,
+    mandatory: false,
+  },
+  contactOtherPhoneNumber: {
+    type: string,
+    required: false,
+    mandatory: false,
+  },
+
+  emergencyContactName: {
+    type: string,
+    required: false,
+    mandatory: false,
+  },
+  // TODO: sic? emercency Contact Name is not neccessary?
+  emergencyContactPhone: {
+    type: string,
+    required: true,
+    mandatory: true,
+  },
+
+  languageGerman: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  languageEnglish: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  languageFrench: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  languageSpanish: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  languageOther: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  languageIsNotFluent: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  languageOtherDetail: {
+    type: string,
+    required: true,
+    mandatory: false,
+  },
+
+  therapyType: {
+    type: "fastingProgram" | "nutrionProgramme",
+    required: true,
+    mandatory: true,
+  },
+
+  arrivalDate: {
+    type: Date,
+    required: true,
+    mandatory: true,
+  },
+  departureDate: {
+    type: Date,
+    required: true,
+    mandatory: true,
+  },
+
+  // TODO: added
+  parkingSpot: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+
+  mediaTV: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+
+  therapyPlanning: {
+    type: string,
+    required: false,
+    mandatory: false,
+  },
+
+  reasonDigestive: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  reasonChronic: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  reasonLocomotive: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  reasonAcute: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  reasonAcuteDetail: {
+    type: string,
+    required: false,
+    mandatory: false,
+  },
+  reasonPrevention: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  reasonRegeneration: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  reasonWeight: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  reasonSmoke: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  reasonWeightAndLifestyle: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  goalsSpiritualRetreat: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  goalsCopingLoss: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  goalsExploringBiohacking: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  goalsEnhancingLongevity: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  goalsManagingStress: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  goalsMetabolicFlexibility: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  goalsDeeperUnderstandingBody: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  goalsPursuing: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  goalsNoSpecification: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  reasonOther: {
+    type: string,
+    required: false,
+    mandatory: false,
+  },
+
+  exclusionDiabetesType1: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  exclusionDiabetesType2: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  exclusionCancer: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  diseasesCancerDiagnosis: {
+    type: string,
+    required: false,
+    mandatory: false,
+  },
+  // TODO: string or date?
+  diseasesCancerDateDiscovery: {
+    type: string,
+    required: false,
+    mandatory: false,
+  },
+  exclusionDrugs: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  exclusionEatingDis: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  exclusionSevereLiverAndKidneyDisfunction: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  noExclusion: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  diseasesOther: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+
+  // TODO: file
+  medicalCare: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+
+  // TODO: file
+  uploadFile: {
+    type: string,
+    required: false,
+    mandatory: false,
+  },
+
+  weight: {
+    type: number,
+    required: true,
+    mandatory: true,
+  },
+  height: {
+    type: number,
+    required: true,
+    mandatory: true,
+  },
+
+  allergiesAny: {
+    type: boolean,
+    required: true,
+    mandatory: false,
+  },
+  allergiesAnyDetail: {
+    type: string,
+    required: true,
+    mandatory: false,
+  },
+
+  disabilityFood: {
+    type: boolean,
+    required: true,
+    mandatory: false,
+  },
+  disabilityFoodDetail: {
+    type: string,
+    required: true,
+    mandatory: false,
+  },
+
+  allergiesDietary: {
+    type: boolean,
+    required: true,
+    mandatory: false,
+  },
+  allergiesDietaryDetail: {
+    type: string,
+    required: true,
+    mandatory: false,
+  },
+
+  disabilityLocomotion: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  disabilityLocomotionDetail: {
+    type: string,
+    required: true,
+    mandatory: false,
+  },
+
+  disabilityHelp: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  disabilityHelpDetail: {
+    type: string,
+    required: true,
+    mandatory: false,
+  },
+  medicationGeneral: {
+    type: boolean,
+    required: true,
+    mandatory: false,
+  },
+  medications: [
+    {
+      name: string,
+      dosage_morning: number,
+      dosage_afternoon: number,
+      dosage_evening: number,
+      dosage_night: number,
+      agent:
+        | "medicationBloodThinning"
+        | "medicationDiabetes"
+        | "medicationImmuneSuppressive"
+        | "medicationOther",
+    },
+  ],
+
+  otherMedication: {
+    type: string,
+    required: false,
+    mandatory: false,
+  },
+  miscellaneous: {
+    type: string,
+    required: false,
+    mandatory: false,
+  },
+
+  // contribution
+  // TODO: should also be maybe
+  talk: {
+    type: boolean | "maybe",
+    required: false,
+    mandatory: false,
+  },
+  talkDetail: {
+    type: string,
+    required: true,
+    mandatory: false,
+  },
+
+  referrer: {
+    type: string,
+    required: true,
+    mandatory: false,
+  },
+  referrerDetail: {
+    type: string,
+    required: true,
+    mandatory: false,
+  },
+  roomPreferenceFlower: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  roomPreferenceNewspaper: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  roomPreferenceYogaMat: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  roomPreferencesOther: {
+    type: string,
+    required: false,
+    mandatory: false,
+  },
+
+  acceptPaymentCondition: {
+    type: boolean,
+    required: true,
+    mandatory: true,
+  },
+  acceptTermsAndConditions: {
+    type: boolean,
+    required: true,
+    mandatory: true,
+  },
+
+  // TODO:
+  // extraTests: {
+  //   type: boolean,
+  //   required: true,
+  // },
+
+  legalContinuity: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  legalNewsletter: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+
+
+  // TODO:
+  // hier bin ich
+
+  // patID:{
+  //   required: false
+  // },
+  // patID:{
+  //   required: false
+  // },
+  trenner: {
     required: false,
   },
   addressPLZ: {
     type: string,
     required: true,
+    mandatory: true,
   },
   addressResidency: {
     type: string,
     required: true,
+    mandatory: true,
   },
   addressStreet: {
     type: string,
     required: true,
+    mandatory: true,
   },
   addressCountry: {
     type: string,
     required: true,
+    mandatory: true,
   },
-  contactPhone: {
-    type: string,
-    required: true,
-  },
-  contactOtherPhoneNumber: {
-    type: string,
-    required: false,
-  },
-  contactFax: {
-    type: string,
-    required: false,
-  },
-  emergencyContactName: {
-    type: string,
-    required: false,
-  },
-  emergencyContactPhone: {
-    type: string,
-    required: false,
-  },
-  languageGerman: {
-    type: boolean,
-    required: true,
-  },
-  languageEnglish: {
-    type: boolean,
-    required: true,
-  },
-  languageFrench: {
-    type: boolean,
-    required: true,
-  },
-  languageSpanish: {
-    type: boolean,
-    required: true,
-  },
-  languageOther: {
-    type: boolean,
-    required: true,
-  },
-  languageIsNotFluent: {
-    type: boolean,
-    required: true,
-  },
-  talk: {
-    type: string,
-    required: false,
-  },
-  talkDetail: {
-    type: string,
-    required: true,
-  },
-  mediaTV: {
-    type: boolean,
-    required: true,
-  },
-  therapyType: {
-    type: string,
-    required: true,
-  },
-  therapyPlanning: {
-    type: string,
-    required: true,
-  },
-  arrivalDate: {
-    type: Date,
-    required: true,
-  },
-  departureDate: {
-    type: Date,
-    required: true,
-  },
-  expectedTimeOfArrival: {
-    type: string,
-    required: true,
-  },
-  travellingByCar: {
+  
+  fyhMicrobiomeTest: {
     type: boolean,
     required: false,
+    mandatory: false,
   },
-  shuttleRequested: {
-    type: string,
-    required: false,
-  },
-  disabilityFood: {
-    type: string,
-    required: false,
-  },
-  disabilityFoodDetail: {
-    type: string,
-    required: true,
-  },
-  disabilityMedAllergy: {
-    type: string,
-    required: false,
-  },
-  disabilityMedAllergyDetail: {
-    type: string,
-    required: true,
-  },
-  disabilityLocomotion: {
-    type: string,
-    required: false,
-  },
-  disabilityLocomotionDetail: {
-    type: string,
-    required: true,
-  },
-  disabilityHelp: {
-    type: string,
-    required: true,
-  },
-  disabilityHelpDetail: {
-    type: string,
-    required: true,
-  },
-  reasonPrevention: {
-    type: string,
-    required: true,
-  },
-  reasonRegeneration: {
-    type: string,
-    required: true,
-  },
-  reasonWeight: {
-    type: string,
-    required: true,
-  },
-  reasonSmoke: {
-    type: string,
-    required: true,
-  },
-  reasonWeightAndLifestyle: {
-    type: string,
-    required: true,
-  },
-  reasonAcute: {
-    type: string,
-    required: true,
-  },
-  reasonAcuteDetail: {
-    type: string,
-    required: true,
-  },
-  reasonChronic: {
-    type: string,
-    required: true,
-  },
-  reasonChronicDetail: {
-    type: string,
-    required: true,
-  },
-  reasonLocomotive: {
-    type: string,
-    required: true,
-  },
-  reasonLocomotiveDetail: {
-    type: string,
-    required: true,
-  },
-  reasonDigestive: {
-    type: string,
-    required: true,
-  },
-  reasonDigestiveDetail: {
-    type: string,
-    required: true,
-  },
-  reasonOther: {
-    type: string,
-    required: true,
-  },
-  reasonNoSpecification: {
-    type: string,
-    required: true,
-  },
-  exclusionDiabetesType1: {
-    type: string,
-    required: true,
-  },
-  exclusionDiabetesType2: {
-    type: string,
-    required: true,
-  },
-  exclusionCancer: {
-    type: string,
-    required: true,
-  },
-  exclusionDrugs: {
-    type: string,
-    required: true,
-  },
-  exclusionEatingDis: {
-    type: string,
-    required: true,
-  },
-  exclusionSevereLiverAndKidneyDisfunction: {
-    type: string,
-    required: true,
-  },
-  noExclusion: {
-    type: string,
-    required: true,
-  },
-  weight: {
-    type: number,
-    required: true,
-  },
-  height: {
-    type: number,
-    required: true,
-  },
-  medicationGeneral: {
-    type: string,
-    required: true,
-  },
-  medications: [
-  {
-    name: string,
-    dosage_morning: number,
-    dosage_afternoon: number,
-    dosage_evening: number,
-    dosage_night: number,
-    agent:
-      "medicationBloodThinning"|
-      "medicationDiabetes"|
-      "medicationImmuneSuppressive"|
-      "medicationOther",
-  },
-],
-  miscellaneous: {
-    type: string,
-    required: true,
-  },
-  isCovidPositive: {
+  fyhFullBloodPanelTest: {
     type: boolean,
-    required: true,
+    required: false,
+    mandatory: false,
   },
-  hasCovidSymptoms: {
+  fyhCortisolTest: {
     type: boolean,
-    required: true,
-  },
-  referrer: {
-    type: string,
-    required: true,
-  },
-  referrerDetail: {
-    type: string,
-    required: true,
-  },
-  legalAGB: {
-    type: string,
-    required: true,
-  },
-  legalPrivacy: {
-    type: string,
-    required: true,
-  },
-  legalContinuity: {
-    type: string,
-    required: true,
-  },
-  legalNewsletter: {
-    type: string,
-    required: true,
-  },
-  chosenLanguage: {
-    type: string,
-    required: true,
+    required: false,
+    mandatory: false,
   },
 };
