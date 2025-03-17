@@ -4,7 +4,6 @@ export type ueberlingen = {
     required: false,
     mandatory: false,
   },
-  //  TODO:
   step: {
     type: string,
     required: true,
@@ -53,8 +52,6 @@ export type ueberlingen = {
     mandatory: true,
   },
 
-  // TODO: nicht benötigt...denke ich mal
-  // oder sollte es vorausgefüllt sein?
   email: {
     type: string,
     required: true,
@@ -479,12 +476,6 @@ export type ueberlingen = {
     mandatory: true,
   },
 
-  // TODO:
-  // extraTests: {
-  //   type: boolean,
-  //   required: true,
-  // },
-
   legalContinuity: {
     type: boolean,
     required: false,
@@ -497,17 +488,9 @@ export type ueberlingen = {
   },
 
 
-  // TODO:
-  // hier bin ich
-
-  // patID:{
-  //   required: false
-  // },
-  // patID:{
-  //   required: false
-  // },
   trenner: {
     required: false,
+    mandatory: false,
   },
   addressPLZ: {
     type: string,

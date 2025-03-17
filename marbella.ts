@@ -9,7 +9,6 @@ export type marbellaContract = {
     type: string,
     required: true,
     mandatory: false,
-    // mandatory: true,
   },
 
   gender: {
@@ -54,8 +53,6 @@ export type marbellaContract = {
     mandatory: true,
   },
 
-  // TODO: nicht benötigt...denke ich mal
-  // oder sollte es vorausgefüllt sein?
   email: {
     type: string,
     required: true,
@@ -480,12 +477,6 @@ export type marbellaContract = {
     mandatory: true,
   },
 
-  // TODO:
-  // extraTests: {
-  //   type: boolean,
-  //   required: true,
-  // },
-
   legalContinuity: {
     type: boolean,
     required: false,
@@ -498,17 +489,9 @@ export type marbellaContract = {
   },
 
 
-  // TODO:
-  // hier bin ich
-
-  // patID:{
-  //   required: false
-  // },
-  // patID:{
-  //   required: false
-  // },
   trenner: {
     required: false,
+    mandatory: true,
   },
   addressPLZ: {
     type: string,
