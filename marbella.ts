@@ -491,7 +491,7 @@ export type marbellaContract = {
 
   trenner: {
     required: false,
-    mandatory: true,
+    mandatory: false,
   },
   addressPLZ: {
     type: string,
