@@ -408,7 +408,7 @@ export type marbellaContract = {
         | "medicationDiabetes"
         | "medicationImmuneSuppressive"
         | "medicationOther",
-    },
+    }
   ],
 
   otherMedication: {

@@ -407,7 +407,7 @@ export type ueberlingen = {
         | "medicationDiabetes"
         | "medicationImmuneSuppressive"
         | "medicationOther",
-    },
+    }
   ],
 
   otherMedication: {
