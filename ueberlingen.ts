@@ -79,7 +79,6 @@ export type ueberlingen = {
     required: false,
     mandatory: false,
   },
-  // TODO: sic? emercency Contact Name is not neccessary?
   emergencyContactPhone: {
     type: string,
     required: true,
@@ -139,7 +138,6 @@ export type ueberlingen = {
     mandatory: true,
   },
 
-  // TODO: added
   parkingSpot: {
     type: boolean,
     required: false,
@@ -158,97 +156,107 @@ export type ueberlingen = {
     mandatory: false,
   },
 
-  reasonDigestive: {
+  improve_general_health: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  reasonChronic: {
+  prevent_disease_longevity: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  reasonLocomotive: {
+  detoxification: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  reasonAcute: {
+  reduce_pain: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  reasonAcuteDetail: {
-    type: string,
-    required: false,
-    mandatory: false,
-  },
-  reasonPrevention: {
+  reduce_dependencies: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  reasonRegeneration: {
+  treat_a_disease: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  reasonWeight: {
+  reduce_inflammation: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  reasonSmoke: {
+  medical_intervention: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  reasonWeightAndLifestyle: {
+  weight_management: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  goalsSpiritualRetreat: {
+  reset_eating_habits: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  goalsCopingLoss: {
+  improve_physical_fitness: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  goalsExploringBiohacking: {
+  emotional_balance: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  goalsEnhancingLongevity: {
+  mental_clarity: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  goalsManagingStress: {
+  improve_sleep: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  goalsMetabolicFlexibility: {
+  overcome_difficult_life: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  goalsDeeperUnderstandingBody: {
+  wish_for_a_child: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  goalsPursuing: {
+  hormonal_balance: {
     type: boolean,
     required: false,
     mandatory: false,
   },
-  goalsNoSpecification: {
+  exploring_biohacking: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  seeking_spiritual_retreat: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  managing_stress: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
+  metabolic_flexibility: {
     type: boolean,
     required: false,
     mandatory: false,
@@ -279,7 +287,6 @@ export type ueberlingen = {
     required: false,
     mandatory: false,
   },
-  // TODO: string or date?
   diseasesCancerDateDiscovery: {
     type: string,
     required: false,
@@ -306,19 +313,17 @@ export type ueberlingen = {
     mandatory: false,
   },
   diseasesOther: {
-    type: boolean,
+    type: string,
     required: false,
     mandatory: false,
   },
 
-  // TODO: file
   medicalCare: {
     type: boolean,
     required: false,
     mandatory: false,
   },
 
-  // TODO: file
   uploadFile: {
     type: string,
     required: false,
@@ -398,15 +403,7 @@ export type ueberlingen = {
   medications: [
     {
       name: string,
-      dosage_morning: number,
-      dosage_afternoon: number,
-      dosage_evening: number,
-      dosage_night: number,
-      agent:
-        | "medicationBloodThinning"
-        | "medicationDiabetes"
-        | "medicationImmuneSuppressive"
-        | "medicationOther",
+      dosage: number,
     }
   ],
 
@@ -421,8 +418,6 @@ export type ueberlingen = {
     mandatory: false,
   },
 
-  // contribution
-  // TODO: should also be maybe
   talk: {
     type: boolean | "maybe",
     required: false,
@@ -437,7 +432,7 @@ export type ueberlingen = {
   referrer: {
     type: string,
     required: true,
-    mandatory: false,
+    mandatory: true,
   },
   referrerDetail: {
     type: string,
@@ -476,6 +471,7 @@ export type ueberlingen = {
     mandatory: true,
   },
 
+
   legalContinuity: {
     type: boolean,
     required: false,
@@ -487,45 +483,44 @@ export type ueberlingen = {
     mandatory: false,
   },
 
-
   trenner: {
-    required: false,
-    mandatory: false,
-  },
+    required: false;
+    mandatory: false;
+  };
   addressPLZ: {
-    type: string,
-    required: true,
-    mandatory: true,
-  },
+    type: string;
+    required: true;
+    mandatory: true;
+  };
   addressResidency: {
-    type: string,
-    required: true,
-    mandatory: true,
-  },
+    type: string;
+    required: true;
+    mandatory: true;
+  };
   addressStreet: {
-    type: string,
-    required: true,
-    mandatory: true,
-  },
+    type: string;
+    required: true;
+    mandatory: true;
+  };
   addressCountry: {
-    type: string,
-    required: true,
-    mandatory: true,
-  },
-  
+    type: string;
+    required: true;
+    mandatory: true;
+  };
+
   fyhMicrobiomeTest: {
-    type: boolean,
-    required: false,
-    mandatory: false,
-  },
+    type: boolean;
+    required: false;
+    mandatory: false;
+  };
   fyhFullBloodPanelTest: {
-    type: boolean,
-    required: false,
-    mandatory: false,
-  },
+    type: boolean;
+    required: false;
+    mandatory: false;
+  };
   fyhCortisolTest: {
-    type: boolean,
-    required: false,
-    mandatory: false,
-  },
+    type: boolean;
+    required: false;
+    mandatory: false;
+  };
 };
