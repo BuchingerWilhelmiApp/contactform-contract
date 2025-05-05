@@ -9,7 +9,16 @@ export type ueberlingen = {
     required: true,
     mandatory: false,
   },
-
+  chosenLanguage: {
+    type: string,
+    required: false,
+    mandatory: false,
+  }
+  reference_url: {
+    type: string,
+    required: false,
+    mandatory: false,
+  }
   gender: {
     type: string,
     required: true,
@@ -431,8 +440,8 @@ export type ueberlingen = {
 
   referrer: {
     type: string,
-    required: true,
-    mandatory: true,
+    required: false,
+    mandatory: false,
   },
   referrerDetail: {
     type: string,
@@ -508,17 +517,52 @@ export type ueberlingen = {
     mandatory: true;
   };
 
-  fyhMicrobiomeTest: {
+  fyhCardiovascular: {
     type: boolean;
     required: false;
     mandatory: false;
   };
-  fyhFullBloodPanelTest: {
+  fyhMicroNutrient: {
     type: boolean;
     required: false;
     mandatory: false;
   };
-  fyhCortisolTest: {
+  fyhStress: {
+    type: boolean;
+    required: false;
+    mandatory: false;
+  };
+  fyhMitochondrial: {
+    type: boolean;
+    required: false;
+    mandatory: false;
+  };
+  fyhGutHealth: {
+    type: boolean;
+    required: false;
+    mandatory: false;
+  };
+  fyhGenetic: {
+    type: boolean;
+    required: false;
+    mandatory: false;
+  };
+  fyhBodyComposition: {
+    type: boolean;
+    required: false;
+    mandatory: false;
+  };
+  fyhNutrinionalStatus: {
+    type: boolean;
+    required: false;
+    mandatory: false;
+  };
+  fyhFemaleHormone: {
+    type: boolean;
+    required: false;
+    mandatory: false;
+  };
+  fyhMaleHormone: {
     type: boolean;
     required: false;
     mandatory: false;

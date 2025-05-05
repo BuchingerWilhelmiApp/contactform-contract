@@ -9,6 +9,16 @@ export type marbellaContract = {
     required: true,
     mandatory: false,
   },
+  chosenLanguage: {
+    type: string,
+    required: false,
+    mandatory: false,
+  }
+  reference_url: {
+    type: string,
+    required: false,
+    mandatory: false,
+  }
 
   gender: {
     type: string,
@@ -431,8 +441,8 @@ export type marbellaContract = {
 
   referrer: {
     type: string,
-    required: true,
-    mandatory: true,
+    required: false,
+    mandatory: false,
   },
   referrerDetail: {
     type: string,
@@ -509,19 +519,54 @@ export type marbellaContract = {
     mandatory: true,
   },
   
-  fyhMicrobiomeTest: {
-    type: boolean,
-    required: false,
-    mandatory: false,
-  },
-  fyhFullBloodPanelTest: {
-    type: boolean,
-    required: false,
-    mandatory: false,
-  },
-  fyhCortisolTest: {
-    type: boolean,
-    required: false,
-    mandatory: false,
-  },
+  fyhCardiovascular: {
+    type: boolean;
+    required: false;
+    mandatory: false;
+  };
+  fyhMicroNutrient: {
+    type: boolean;
+    required: false;
+    mandatory: false;
+  };
+  fyhStress: {
+    type: boolean;
+    required: false;
+    mandatory: false;
+  };
+  fyhMitochondrial: {
+    type: boolean;
+    required: false;
+    mandatory: false;
+  };
+  fyhGutHealth: {
+    type: boolean;
+    required: false;
+    mandatory: false;
+  };
+  fyhGenetic: {
+    type: boolean;
+    required: false;
+    mandatory: false;
+  };
+  fyhBodyComposition: {
+    type: boolean;
+    required: false;
+    mandatory: false;
+  };
+  fyhNutrinionalStatus: {
+    type: boolean;
+    required: false;
+    mandatory: false;
+  };
+  fyhFemaleHormone: {
+    type: boolean;
+    required: false;
+    mandatory: false;
+  };
+  fyhMaleHormone: {
+    type: boolean;
+    required: false;
+    mandatory: false;
+  };
 }
