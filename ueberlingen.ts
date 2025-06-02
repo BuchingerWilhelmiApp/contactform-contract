@@ -1,9 +1,4 @@
 export type ueberlingen = {
-  patID: {
-    type: string,
-    required: false,
-    mandatory: false,
-  },
   step: {
     type: string,
     required: true,
@@ -19,6 +14,11 @@ export type ueberlingen = {
     required: false,
     mandatory: false,
   }
+  firstTime: {
+    type: boolean,
+    required: true,
+    mandatory: true,
+  },
   gender: {
     type: string,
     required: true,
@@ -85,8 +85,8 @@ export type ueberlingen = {
 
   emergencyContactName: {
     type: string,
-    required: false,
-    mandatory: false,
+    required: true,
+    mandatory: true,
   },
   emergencyContactPhone: {
     type: string,
@@ -146,14 +146,13 @@ export type ueberlingen = {
     required: true,
     mandatory: true,
   },
-
-  parkingSpot: {
+  alreadyVisited: {
     type: boolean,
-    required: false,
-    mandatory: false,
+    required: true,
+    mandatory: true,
   },
 
-  mediaTV: {
+  parkingSpot: {
     type: boolean,
     required: false,
     mandatory: false,
@@ -270,9 +269,14 @@ export type ueberlingen = {
     required: false,
     mandatory: false,
   },
-  reasonOther: {
+  reasonOtherBoolean: {
     type: string,
     required: false,
+    mandatory: false,
+  },
+  reasonOther: {
+    type: string,
+    required: true,
     mandatory: false,
   },
 
@@ -470,9 +474,9 @@ export type ueberlingen = {
   },
 
   acceptPaymentCondition: {
-    type: boolean,
+    type: boolean | "empty",
     required: true,
-    mandatory: true,
+    mandatory: false,
   },
   acceptTermsAndConditions: {
     type: boolean,
@@ -517,54 +521,4 @@ export type ueberlingen = {
     mandatory: true;
   };
 
-  fyhCardiovascular: {
-    type: boolean;
-    required: false;
-    mandatory: false;
-  };
-  fyhMicroNutrient: {
-    type: boolean;
-    required: false;
-    mandatory: false;
-  };
-  fyhStress: {
-    type: boolean;
-    required: false;
-    mandatory: false;
-  };
-  fyhMitochondrial: {
-    type: boolean;
-    required: false;
-    mandatory: false;
-  };
-  fyhGutHealth: {
-    type: boolean;
-    required: false;
-    mandatory: false;
-  };
-  fyhGenetic: {
-    type: boolean;
-    required: false;
-    mandatory: false;
-  };
-  fyhBodyComposition: {
-    type: boolean;
-    required: false;
-    mandatory: false;
-  };
-  fyhNutrinionalStatus: {
-    type: boolean;
-    required: false;
-    mandatory: false;
-  };
-  fyhFemaleHormone: {
-    type: boolean;
-    required: false;
-    mandatory: false;
-  };
-  fyhMaleHormone: {
-    type: boolean;
-    required: false;
-    mandatory: false;
-  };
 };
