@@ -1,9 +1,4 @@
 export type marbellaContract = {
-  patID: {
-    type: string,
-    required: false,
-    mandatory: false,
-  },
   step: {
     type: string,
     required: true,
@@ -13,13 +8,17 @@ export type marbellaContract = {
     type: string,
     required: false,
     mandatory: false,
-  }
+  },
   reference_url: {
     type: string,
     required: false,
     mandatory: false,
-  }
-
+  },
+  firstTime: {
+    type: boolean,
+    required: true,
+    mandatory: true,
+  },
   gender: {
     type: string,
     required: true,
@@ -44,11 +43,6 @@ export type marbellaContract = {
     type: string,
     required: true,
     mandatory: true,
-  },
-  birthPlace: {
-    type: string,
-    required: false,
-    mandatory: false,
   },
   job: {
     type: string,
@@ -86,8 +80,8 @@ export type marbellaContract = {
 
   emergencyContactName: {
     type: string,
-    required: false,
-    mandatory: false,
+    required: true,
+    mandatory: true,
   },
   emergencyContactPhone: {
     type: string,
@@ -147,21 +141,14 @@ export type marbellaContract = {
     required: true,
     mandatory: true,
   },
-
-  parkingSpot: {
+  alreadyVisited: {
     type: boolean,
-    required: false,
-    mandatory: false,
+    required: true,
+    mandatory: true,
   },
 
   mediaTV: {
     type: boolean,
-    required: false,
-    mandatory: false,
-  },
-
-  therapyPlanning: {
-    type: string,
     required: false,
     mandatory: false,
   },
@@ -271,9 +258,15 @@ export type marbellaContract = {
     required: false,
     mandatory: false,
   },
+
+  reasonOtherBoolean: {
+    type: boolean,
+    required: false,
+    mandatory: false,
+  },
   reasonOther: {
     type: string,
-    required: false,
+    required: true,
     mandatory: false,
   },
 
@@ -493,7 +486,6 @@ export type marbellaContract = {
     mandatory: false,
   },
 
-
   trenner: {
     required: false,
     mandatory: false,
@@ -518,55 +510,5 @@ export type marbellaContract = {
     required: true,
     mandatory: true,
   },
-  
-  fyhCardiovascular: {
-    type: boolean;
-    required: false;
-    mandatory: false;
-  };
-  fyhMicroNutrient: {
-    type: boolean;
-    required: false;
-    mandatory: false;
-  };
-  fyhStress: {
-    type: boolean;
-    required: false;
-    mandatory: false;
-  };
-  fyhMitochondrial: {
-    type: boolean;
-    required: false;
-    mandatory: false;
-  };
-  fyhGutHealth: {
-    type: boolean;
-    required: false;
-    mandatory: false;
-  };
-  fyhGenetic: {
-    type: boolean;
-    required: false;
-    mandatory: false;
-  };
-  fyhBodyComposition: {
-    type: boolean;
-    required: false;
-    mandatory: false;
-  };
-  fyhNutrinionalStatus: {
-    type: boolean;
-    required: false;
-    mandatory: false;
-  };
-  fyhFemaleHormone: {
-    type: boolean;
-    required: false;
-    mandatory: false;
-  };
-  fyhMaleHormone: {
-    type: boolean;
-    required: false;
-    mandatory: false;
-  };
+
 }
