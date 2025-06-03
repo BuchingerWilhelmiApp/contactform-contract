@@ -8,12 +8,12 @@ export type ueberlingen = {
     type: string,
     required: false,
     mandatory: false,
-  }
+  },
   reference_url: {
     type: string,
     required: false,
     mandatory: false,
-  }
+  },
   firstTime: {
     type: boolean,
     required: true,
@@ -43,11 +43,6 @@ export type ueberlingen = {
     type: string,
     required: true,
     mandatory: true,
-  },
-  birthPlace: {
-    type: string,
-    required: false,
-    mandatory: false,
   },
   job: {
     type: string,
@@ -269,8 +264,9 @@ export type ueberlingen = {
     required: false,
     mandatory: false,
   },
+
   reasonOtherBoolean: {
-    type: string,
+    type: boolean,
     required: false,
     mandatory: false,
   },
@@ -476,7 +472,7 @@ export type ueberlingen = {
   acceptPaymentCondition: {
     type: boolean | "empty",
     required: true,
-    mandatory: false,
+    mandatory: true,
   },
   acceptTermsAndConditions: {
     type: boolean,
@@ -497,28 +493,28 @@ export type ueberlingen = {
   },
 
   trenner: {
-    required: false;
-    mandatory: false;
-  };
+    required: false,
+    mandatory: false,
+  },
   addressPLZ: {
-    type: string;
-    required: true;
-    mandatory: true;
-  };
+    type: string,
+    required: true,
+    mandatory: true,
+  },
   addressResidency: {
-    type: string;
-    required: true;
-    mandatory: true;
-  };
+    type: string,
+    required: true,
+    mandatory: true,
+  },
   addressStreet: {
-    type: string;
-    required: true;
-    mandatory: true;
-  };
+    type: string,
+    required: true,
+    mandatory: true,
+  },
   addressCountry: {
-    type: string;
-    required: true;
-    mandatory: true;
-  };
+    type: string,
+    required: true,
+    mandatory: true,
+  },
 
-};
+}
